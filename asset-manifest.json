@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/MonzerratBanuelos/note-me/static/css/main.f53b9c3f.css",
+    "main.js": "/MonzerratBanuelos/note-me/static/js/main.cbe65ba3.js",
+    "static/js/787.89a743ec.chunk.js": "/MonzerratBanuelos/note-me/static/js/787.89a743ec.chunk.js",
+    "static/media/NoteMe.png": "/MonzerratBanuelos/note-me/static/media/NoteMe.8ca068dc0200dcc7e7cb.png",
+    "index.html": "/MonzerratBanuelos/note-me/index.html",
+    "main.f53b9c3f.css.map": "/MonzerratBanuelos/note-me/static/css/main.f53b9c3f.css.map",
+    "main.cbe65ba3.js.map": "/MonzerratBanuelos/note-me/static/js/main.cbe65ba3.js.map",
+    "787.89a743ec.chunk.js.map": "/MonzerratBanuelos/note-me/static/js/787.89a743ec.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f53b9c3f.css",
+    "static/js/main.cbe65ba3.js"
+  ]
+}
