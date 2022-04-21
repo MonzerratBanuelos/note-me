@@ -5,7 +5,7 @@ function Navigation () {
         <div>
             <ul>
                 <button>
-                    <NavLink to='note-me/feed'>Home</NavLink>
+                    <NavLink to='note-me/'>Home</NavLink>
                 </button>
                 <li>
                     <NavLink to='note-me/Register'>Register</NavLink>
