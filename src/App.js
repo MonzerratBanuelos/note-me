@@ -1,12 +1,22 @@
-import logo from './resource/NoteMe.png';
 import './App.css';
+import {BrowserRouter,Routes, Route} from 'react-router-dom';
+import Login from './component/Login';
+import Register from './component/Register';
+import Feed from './component/Feed';
+import About from './component/About';
+import Page404 from './component/Page404';
 
 function App() {
   return (
-    <div className="App">
-      <img src={logo} className="App-logo" alt="logo" />
-      <h1>Tú lugar de notas preferido</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Login/>} />
+        <Route path='Register' element= {<Register/>} />
+        <Route path='Feed' element = {<Feed/>} />
+        <Route path='About' element={<About/>} />
+        <Route path='*' element={<Page404/>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
