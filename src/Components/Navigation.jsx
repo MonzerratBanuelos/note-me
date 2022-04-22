@@ -1,6 +1,6 @@
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom';
 
-function Navigation () {
+function Navigation() {
   return (
     <div>
       <ul>
@@ -18,6 +18,6 @@ function Navigation () {
         </li>
       </ul>
     </div>
-  )
+  );
 }
 export default Navigation;
