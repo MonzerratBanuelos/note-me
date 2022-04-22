@@ -1,17 +1,17 @@
-import './App.css';
-import {BrowserRouter,Routes, Route} from 'react-router-dom';
-import Login from './views/Login';
-import MakeNote from './views/MakeNote';
-import Feed from './views/Feed';
-import About from './views/About';
-import Page404 from './views/Page404';
+import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Login from './views/Login'
+import MakeNote from './views/MakeNote'
+import Feed from './views/Feed'
+import About from './views/About'
+import Page404 from './views/Page404'
 
-import Navigation from './Components/Navigation';
-function App() {
+import Navigation from './Components/Navigation'
+function App () {
   return (
     <BrowserRouter>
 
-    <Navigation/>  
+    <Navigation/>
 
       <Routes>
         <Route path='note-me/' element={<Login/>} />
@@ -21,7 +21,7 @@ function App() {
         <Route path='*' element={<Page404/>} />
       </Routes>
     </BrowserRouter>
-  );
+  )
 }
 
-export default App;
+export default App

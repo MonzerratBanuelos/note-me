@@ -1,10 +1,9 @@
-import React from "react";
-import '../views/Login.css';
+import '../views/Login.css'
 import logo from '../resource/NoteMe.png'
 import google from '../resource/google.png'
 
-function Login() {
-  return(
+function Login () {
+  return (
     <div className="App">
       <img
         src={logo}
@@ -17,5 +16,4 @@ function Login() {
   )
 }
 
-export default Login;
-
+export default Login

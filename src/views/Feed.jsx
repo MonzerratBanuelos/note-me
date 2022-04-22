@@ -1,7 +1,6 @@
-import React from "react";
 import logo from '../resource/NoteMe.png'
-function Feed() {
-  return(
+function Feed () {
+  return (
     <div className="App">
       <img src={logo} className="App-logo" alt="logo" />
       <h1>Esto es el Feed</h1>
@@ -9,5 +8,4 @@ function Feed() {
   )
 }
 
-
-export default Feed;
+export default Feed
