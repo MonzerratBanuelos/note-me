@@ -1,13 +1,13 @@
 import React from "react";
 import logo from '../resource/NoteMe.png'
-function About() {
+function MakeNote() {
   return(
     <div className="App">
       <img src={logo} className="App-logo" alt="logo" />
-      <h1>Esto es el About</h1>
+      <h1>Esto es donde haces la nota c:</h1>
     </div>
   )
 }
 
 
-export default About;
+export default MakeNote;
