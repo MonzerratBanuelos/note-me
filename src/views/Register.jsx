@@ -29,13 +29,19 @@ const handleChange = ({target: {name, value} })=> {
       await signup(user.email, user.password);
       console.log('si navego')
     navigate('/');
-    } catch(error){
-      console.log('no navego')
-      console.log(error.message);
-        setError("La contraseña es incorrecta");
+    } catch (error) {
+      console.log('djdfj')
+      if (error.code === "auth/invalid-email") {
+        setError("Correo inválido");
       }
+      if (error.code === "auth/weak-password") {
+        setError("La contraseña debería tener al menos 6 caracteres");
+      }
+      if (error.code === "auth/email-already-in-use") {
+        setError("Usuario ya registrado");
+      }  
+    }
 
-  
 };
 // }
 
@@ -43,6 +49,7 @@ const handleChange = ({target: {name, value} })=> {
     <div className='App'>
 
       <img src={ logo } className='App-logo' alt='logo' />
+      {error && <p>{error}</p>}
       <h1>Esto es el Register</h1>
       <form onSubmit={ handleSubmit}>
         <label htmlFor='email'>E-mail</label>

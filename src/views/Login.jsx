@@ -2,7 +2,11 @@
 import '../views/Login.css';
 import logo from '../resource/NoteMe.png';
 import google from '../resource/google.png';
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
+import { LoginGoogle } from '../firebase-store/firebase-auth';
+// import { auth,} from '../firebase-store/firebaseKeys';
+// import { provider } from '../firebase-store/firebase-auth';
+// import { signInWithPopup } from '../firebase-store/firebase-imports';
 // import { useAuth } from '../context/authContext';
 
 function Login({handleSetAutenticate}) {
@@ -11,17 +15,17 @@ function Login({handleSetAutenticate}) {
 // console.log(user)
 
 
-  const navigate = useNavigate();
-  function handleClick () {
-    navigate('Feed');
+  const handleClickGoogle = async () => {
+    await LoginGoogle();
   }
+
   return (
     <>
     <div className='App'>
       <button onClick={()=>{handleSetAutenticate()}}>Ya entreeeee</button>
       <img src={logo} className='App-logo' alt='logo' />
       <h1>Your favorite note place!!</h1>
-      <button className='btnGoogle' onClick={ handleClick }>
+      <button className='btnGoogle' onClick={ handleClickGoogle }>
         Login with
         <img src={google} className='Google-logo' alt='google' />
       </button>
