@@ -1,24 +1,45 @@
 import './App.css';
+import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Login from './views/Login';
-import MakeNote from './views/MakeNote';
-import Feed from './views/Feed';
-import About from './views/About';
-import Page404 from './views/Page404';
+import Login from './Component-Routes/Login/Login'
+import MakeNote from './Component-Routes/MakeNote/MakeNote';
+import Feed from '../src/Component-Routes/Feed/Feed';
+import Register from './Component-Routes/Register';
+import Page404 from './Component-Routes/Page404/Page404';
 
-import Navigation from './Components/Navigation';
+import { onAuthStateChanged } from "firebase/auth";
+
+import {auth, exit} from './firebase-store/firebase-auth'
+
+
 function App() {
+  // Este es el objeto de donde sacamos el estado actual y el nuevo 
+  // is Autenticate es igual a null y setAutenticate es con lo que modificaremos 
+  // Esto es destructuración 
+  const [isAutenticate, setAutenticate] = useState(null)
+  // Se condiciona que si escucha un usuario mangenda el estado en true mandandole el usuario
+  // Si está en false se pone el usuario en null
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      setAutenticate(user)
+    } else {
+      setAutenticate(null)
+    }
+  });
+  console.log(isAutenticate)
+  // Con el condicionador ternario, se bloquea o se le permiten las paginas al usuario dependiendo su estado
   return (
     <BrowserRouter>
-      <Navigation />
-
-      <Routes>
-        <Route path='note-me/' element={<Login />} />
-        <Route path='note-me/MakeNote' element={<MakeNote />} />
-        <Route path='note-me/Feed' element={<Feed />} />
-        <Route path='note-me/About' element={<About />} />
-        <Route path='*' element={<Page404 />} />
+    {isAutenticate?<Routes>
+        <Route path='/' element={<Feed handleExit={exit} UserInfo={ isAutenticate}/>} />
+        <Route path='/feed' element={<Feed handleExit={exit} UserInfo ={ isAutenticate} />} />
+        <Route path='/MakeNote' element={<MakeNote Name ={isAutenticate} />} />
       </Routes>
+    : <Routes>
+        <Route path='/' element={<Login />} /> 
+        <Route path='*' element={<Page404 />} />
+        <Route path='/Register' element={<Register />} />
+    </Routes>}
     </BrowserRouter>
   );
 }

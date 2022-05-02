@@ -5,16 +5,16 @@ function Navigation() {
     <div>
       <ul>
         <button>
-          <NavLink to='note-me/'>Home</NavLink>
+          <NavLink to='/'>Home</NavLink>
         </button>
         <li>
-          <NavLink to='note-me/MakeNote'>MakeNote</NavLink>
+          <NavLink to='/MakeNote'>MakeNote</NavLink>
         </li>
         <li>
-          <NavLink to='note-me/Feed'>Feed</NavLink>
+          <NavLink to='/Feed'>Feed</NavLink>
         </li>
         <li>
-          <NavLink to='note-me/About'>About</NavLink>
+          <NavLink to='/Register'>Register</NavLink>
         </li>
       </ul>
     </div>
