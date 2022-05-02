@@ -15,8 +15,7 @@ export const  useAuth = () => {
 // eslint-disable-next-line react/prop-types
 export function AuthProvider ({ children }) {
   const signup = (email, password) => {
-    createUserWithEmailAndPassword(auth, email, password)
-    console.log(email, password)
+  return createUserWithEmailAndPassword(auth, email, password)
 };
 
   return <authContext.Provider value={{ signup }}>{children}</authContext.Provider>

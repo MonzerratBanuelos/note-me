@@ -1,19 +1,22 @@
 import { GoogleAuthProvider,getAuth, signInWithPopup } from "./firebase-imports";
 import { app } from "./firebaseKeys";
+import { signOut } from "firebase/auth";
 
 export const provider = new GoogleAuthProvider();
-const auth = getAuth(app);
+export const auth = getAuth(app);
+
+export const exit=()=>signOut(auth)
 
 export const LoginGoogle = () => {
 
-signInWithPopup(auth, provider)
+return signInWithPopup(auth, provider)
   .then((result) => {
     console.log(result)
     // This gives you a Google Access Token. You can use it to access the Google API.
     // const credential = GoogleAuthProvider.credentialFromResult(result);
     // const token = credential.accessToken;
     // The signed-in user info.
-     const user = result.user;
+    const user = result.user;
     console.log(user.displayName + ' ' + user.email+ ' esta logueado');
     // ...
   }).catch((error) => {

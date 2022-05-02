@@ -38,7 +38,7 @@ h1{
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .App {
     text-align: center;
-    color: bisque;
+    color: aliceblue;
   }
 
   .App-logo {

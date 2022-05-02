@@ -54,7 +54,7 @@ const handleChange = ({target: {name, value} })=> {
       <form onSubmit={ handleSubmit}>
         <label htmlFor='email'>E-mail</label>
         <input
-        type='email' 
+        type='text' 
         name='email' 
         id='email'
         placeholder='YourEmail@hotmail.com'
