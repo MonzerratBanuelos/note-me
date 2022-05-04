@@ -26,7 +26,6 @@ function App() {
       setAutenticate(null)
     }
   });
-  console.log(isAutenticate)
   // Con el condicionador ternario, se bloquea o se le permiten las paginas al usuario dependiendo su estado
   return (
     <BrowserRouter>

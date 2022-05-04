@@ -5,7 +5,6 @@ import { auth,db } from '../../firebase-store/firebaseKeys';
 import { useNavigate } from 'react-router-dom';
 
 function MakeNote(props) {
-console.log(props)
 
 const [ title, setTitle ] = useState('')
 const [ note, setNote ] = useState('')
@@ -14,7 +13,7 @@ const navigate = useNavigate();
 // const notesCollectionRef = collection(db, "notes");
 
 const createNote = async () => {
-  await addDoc(collection(db, 'notes'), {
+  await addDoc(collection(db, 'users', auth.currentUser.uid, 'notes'), {
   title,
   note,
   author: auth.currentUser.displayName,
@@ -59,6 +58,7 @@ setNote(e.target.value)
       onChange={handleChangeNote}
       />
       <button className='buttonsStyles' onClick={createNote}>Publish</button>
+      <button className='buttonsStyles' onClick={()=>{navigate('/')}}>Cancel</button>
 
       
     </div>

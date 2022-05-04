@@ -1,10 +1,11 @@
 import exitImg from '../../resource/exitImg.png'
 
-function Header () {
-  <>
+function Header (userInfo) {
+  console.log(userInfo)
+return <>
   <header>
-  {/*  <img src={L} className='User-photo' alt='logo' /> */}
-    <h3>hi</h3>
+    <img src={userInfo.userInfo.Name.photoURL} className='User-photo' alt='logo' /> 
+    <h3>{userInfo.userInfo.displayName}</h3>
     <button className='LogOut'>
   <img src={exitImg} className='exit-Logo' alt='Exit' />
   </button>
