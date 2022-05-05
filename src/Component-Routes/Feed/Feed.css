@@ -3,15 +3,14 @@
   display: grid;
   /*grid-template-columns: 38% 58%;*/
   column-gap: 4%;
-  row-gap: 4%;
-  grid-template-rows:minmax(30%, auto);
+  /* row-gap: 4%; */
   grid-template-columns: 30% 30% 30%;
+  
 }
 .btnSection{
   background: transparent;
   display: flex;
-  justify-content: flex-end;
-  padding:2% 4% 0 0;
+  justify-content: space-around;
 }
 .editButton{
   background: transparent;
@@ -21,6 +20,7 @@
 }
 .editImgBtn{
   background: transparent;
+  opacity: 0.6;
 }
 .eraseButton{
   background: transparent;
@@ -34,12 +34,17 @@
   .noteTitle{
   background: transparent;
   margin: 0%;
+  font-size: x-large;
+  text-align: center;
 }
   .noteContent{
   background: transparent;
+  font-size: large;
+  text-align:left;
 }
   .noteAuthor{
   background: transparent;
+  font-size: large;
 }
 .addNoteBtn {
   border-radius: 50%;
@@ -48,6 +53,7 @@
   position:fixed;
   bottom: 4%;
   right: 4%;
+  border: 5px solid #767B91;
 }
 .addBtn{
   background-color: transparent;
@@ -55,6 +61,11 @@
 .noteContainer{
   background-color: #767B91;
   border-radius: 2rem;
+  margin-bottom: 1rem;
+  overflow-y: auto;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
   
 }
 
@@ -64,13 +75,15 @@ p{
 }
 
 section:nth-child(odd){
-  color: #2A324B;
+  color: aliceblue;
+  grid-row-start: span 3;
+  grid-column-start: 1;
+  grid-column-end: 2;
 }
-section:nth-child(even){
+section.noteContainer:nth-child(even){
   color: #2A324B;
+  height: 500px;
   background: aliceblue;
   grid-column-start: 2;
   grid-column-end: 4;
-  grid-template:minmax(30%, auto);
-  grid-row-start: span 2
 }
