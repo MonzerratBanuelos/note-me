@@ -33,8 +33,33 @@
   }
 
 /* AQUI VA LA TABLET DE MANERA HORIZONTAL*/
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
   .Google-logo {
     background-color: aliceblue;
+  }
+  .loginContainer {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .NoteLogo {
+    margin: 0%;
+    width: 50%;
+    height: auto;
+  }
+  .buttonsStylesLogin {
+    color: #2a324b;
+    font-size: x-large;
+    font-weight: 600;
+    background-color: aliceblue;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+    border-radius: 15px;
+    width: 50%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    margin-top: 2%
   }
 }
