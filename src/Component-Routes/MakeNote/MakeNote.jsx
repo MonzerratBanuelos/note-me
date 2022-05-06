@@ -3,8 +3,9 @@ import { useState } from 'react';
 import { addDoc, collection } from '../../firebase-store/firebase-imports';
 import { auth,db } from '../../firebase-store/firebaseKeys';
 import { useNavigate } from 'react-router-dom';
+import Header from '../Layout-component/Header';
 
-function MakeNote(props) {
+function MakeNote({handleExit, UserInfo}) {
 
 const [ title, setTitle ] = useState('')
 const [ note, setNote ] = useState('')
@@ -33,10 +34,7 @@ setNote(e.target.value)
 
   return (
     <div className='makeNotePage'>
-      <header>
-      <img src={props.Name.photoURL} className='User-photo' alt='logo' />
-      <h3>{props.Name.displayName}</h3>
-      </header>
+      <Header handleExit={handleExit}UserInfo= { UserInfo}></Header>
       <h1>Create your note</h1>
       <label>Title:</label>
       <input 

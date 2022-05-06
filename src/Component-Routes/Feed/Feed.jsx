@@ -1,6 +1,5 @@
 /* eslint-disable react/jsx-key */
 import './Feed.css'
-import exitImg from '../../resource/exitImg.png';
 import addSign from '../../resource/addSign.png';
 import Pencil from '../../resource/Pencil.png';
 import Trash from '../../resource/Trash.png'
@@ -8,6 +7,7 @@ import { useEffect, useState} from 'react';
 import { collection, onSnapshot, doc, deleteDoc} from '../../firebase-store/firebase-imports';
 import { db, auth } from '../../firebase-store/firebaseKeys';
 import { useNavigate } from 'react-router-dom';
+import Header from '../Layout-component/Header';
 
 
 function Feed({handleExit, UserInfo}) {
@@ -36,17 +36,7 @@ function Feed({handleExit, UserInfo}) {
 
   return (
     <div className='feedPage'>
-
-      <header>
-        <img src={UserInfo.photoURL} className='User-photo' alt='logo' />
-        <h3>{UserInfo.displayName}</h3>
-        <button className='LogOut' onClick={()=>{
-          handleExit().then(()=>{console.log('good bye')})
-        }}>
-        <img src={exitImg} className='exit-Logo' alt='Exit' />
-        </button>
-      </header>
-
+      <Header handleExit={handleExit} UserInfo={UserInfo}></Header>
       <div className='notesContainer'>
         {noteList.map((post)=> {
           return <section className='noteContainer' key={post.id}>

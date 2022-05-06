@@ -32,7 +32,7 @@ function App() {
     {isAutenticate?<Routes>
         <Route path='/' element={<Feed handleExit={exit} UserInfo={ isAutenticate}/>} />
         <Route path='/feed' element={<Feed handleExit={exit} UserInfo ={ isAutenticate} />} />
-        <Route path='/MakeNote' element={<MakeNote Name ={isAutenticate} />} />
+        <Route path='/MakeNote' element={<MakeNote  handleExit={exit} UserInfo={ isAutenticate}/>} />
       </Routes>
     : <Routes>
         <Route path='/' element={<Login />} /> 

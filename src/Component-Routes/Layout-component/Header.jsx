@@ -1,12 +1,14 @@
 import exitImg from '../../resource/exitImg.png'
 
-function Header (userInfo) {
-  console.log(userInfo)
+function Header ({handleExit, UserInfo}) {
+  console.log(UserInfo)
 return <>
   <header>
-    <img src={userInfo.userInfo.Name.photoURL} className='User-photo' alt='logo' /> 
-    <h3>{userInfo.userInfo.displayName}</h3>
-    <button className='LogOut'>
+    <img src={UserInfo.photoURL} className='User-photo' alt='logo' /> 
+    <h3>{UserInfo.displayName}</h3>
+    <button className='LogOut'  onClick={()=>{
+          handleExit().then(()=>{console.log('good bye')})
+        }}>
   <img src={exitImg} className='exit-Logo' alt='Exit' />
   </button>
 </header>
