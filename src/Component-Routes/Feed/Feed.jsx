@@ -4,10 +4,11 @@ import addSign from '../../resource/addSign.png';
 import Pencil from '../../resource/Pencil.png';
 import Trash from '../../resource/Trash.png'
 import { useEffect, useState} from 'react';
-import { collection, onSnapshot, doc, deleteDoc} from '../../firebase-store/firebase-imports';
+import { collection, onSnapshot} from '../../firebase-store/firebase-imports';
 import { db, auth } from '../../firebase-store/firebaseKeys';
 import { useNavigate } from 'react-router-dom';
 import Header from '../Layout-component/Header';
+import DeleteNote from '../DeleteNote';
 
 
 function Feed({handleExit, UserInfo}) {
@@ -29,9 +30,7 @@ function Feed({handleExit, UserInfo}) {
     getNotes()
   }, []);
 
-  const deleteNote = async (id) =>{
-    await deleteDoc(doc(db, 'users', auth.currentUser.uid, 'notes',id))
-  }
+  
   
 
   return (
@@ -44,10 +43,10 @@ function Feed({handleExit, UserInfo}) {
           <p className='noteContent'>{post.note}</p>
           <p className='noteAuthor'>Author:{post.author}</p>
           <section className='btnSection'>
-        <button className='editButton' onClick={() => {console.log('En un futuro editaré')}}>
+        <button className='editButton' onClick={() => {DeleteNote()}}>
         <img src={Pencil} className='editImgBtn' alt='Editbtn' />
         </button>
-        <button className='eraseButton' onClick={() => {deleteNote(post.id)}}>
+        <button className='eraseButton' onClick={() => {DeleteNote(post.id)}}>
         <img src={Trash} className='eraseImgBtn' alt='Erasebtn' />
         </button>
         </section>

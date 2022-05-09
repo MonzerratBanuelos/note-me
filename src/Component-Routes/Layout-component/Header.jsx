@@ -1,7 +1,6 @@
 import exitImg from '../../resource/exitImg.png'
 
 function Header ({handleExit, UserInfo}) {
-  console.log(UserInfo)
 return <>
   <header>
     <img src={UserInfo.photoURL} className='User-photo' alt='logo' /> 
