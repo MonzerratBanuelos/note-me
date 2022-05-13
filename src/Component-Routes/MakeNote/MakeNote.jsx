@@ -1,6 +1,6 @@
 import './MakeNote.css';
 import { useState } from 'react';
-import { addDoc, collection } from '../../firebase-store/firebase-imports';
+import { addDoc, collection, serverTimestamp } from '../../firebase-store/firebase-imports';
 import { auth,db } from '../../firebase-store/firebaseKeys';
 import { useNavigate } from 'react-router-dom';
 import Header from '../Layout-component/Header';
@@ -19,6 +19,8 @@ const createNote = async () => {
   note,
   author: auth.currentUser.displayName,
   id: auth.currentUser.uid,
+  date: serverTimestamp(),
+  dateTime: new Date().toLocaleDateString(),
 })
 navigate('/')
 };
@@ -33,30 +35,30 @@ setNote(e.target.value)
 
 
   return (
-    <div className='makeNotePage'>
+    <div className='make-note-page'>
       <Header handleExit={handleExit}UserInfo= { UserInfo}></Header>
       <h1>Create your note</h1>
       <label>Title:</label>
       <input 
-      className='inputNotes'
+      className='input-notes'
       type='text'
-      name='makeNoteTitle'
-      id='makeNoteTitle'
+      name='title'
+      id='make-note-title'
       placeholder='Ex. Laundry'
       onChange={handleChangeTitle}
       />
       
       <label>Note:</label>
       <textarea 
-      className='inputNotes'
+      className='input-notes'
       type='text'
-      name='makeNoteContent'
-      id='makeNoteContent'
+      name='note'
+      id='make-note-content'
       placeholder='Ex. Dont forget to pick up the laundry before 6 pm'
       onChange={handleChangeNote}
       />
-      <button className='buttonsStyles' onClick={createNote}>Publish</button>
-      <button className='buttonsStyles' onClick={()=>{navigate('/')}}>Cancel</button>
+      <button className='buttons-styles' onClick={()=>{createNote()}}>Publish</button>
+      <button className='buttons-styles' onClick={()=>{navigate('/')}}>Cancel</button>
 
       
     </div>

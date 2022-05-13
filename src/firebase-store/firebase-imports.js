@@ -12,6 +12,7 @@ export {
   query,
   arrayUnion,
   arrayRemove,
+  serverTimestamp,
 // eslint-disable-next-line import/no-unresolved
   } from 'https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.js';
   export {

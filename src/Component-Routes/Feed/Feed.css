@@ -1,61 +1,63 @@
-.notesContainer{
+.notes-container{
   margin: 3%;
   display: grid;
   column-gap: 4%;
   grid-template-columns: 30% 30% 30%;
 }
-.btnSection{
+.btn-section{
   background: transparent;
   display: flex;
   justify-content: space-around;
 }
-.editButton{
+.edit-button{
   background: transparent;
   border: none;
   width: 2rem;
   display:inline;
 }
-.editImgBtn{
+.edit-img-btn{
   background: transparent;
-  opacity: 0.6;
+  opacity: 0.4;
 }
-.eraseButton{
+.erase-button{
   background: transparent;
   border: none;
   width: 2rem;
   margin:0 5% 0 5%;
 }
-  .eraseImgBtn{
+  .erase-img-btn{
   background: transparent;
 }
-  .noteTitle{
+  .note-title{
   background: transparent;
   margin: 0%;
   font-size: x-large;
   text-align: center;
+  text-transform: uppercase;
 }
-  .noteContent{
+  .note-content{
   background: transparent;
-  font-size: large;
+  font-size: x-large;
   text-align:left;
 }
-  .noteAuthor{
+  .note-author{
   background: transparent;
   font-size: large;
 }
-.addNoteBtn {
+.add-note-btn {
   border-radius: 50%;
   border: none;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
   position:fixed;
   bottom: 4%;
   right: 4%;
+  background-color: #767B91;
   border: 5px solid #767B91;
 }
-.addBtn{
+.add-btn{
   background-color: transparent;
 }
-.noteContainer{
+.note-container{
   background-color: #767B91;
   border-radius: 2rem;
   margin-bottom: 1rem;
@@ -63,12 +65,19 @@
   height: 650px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  padding: 2%;
   
 }
 
 pre{
   overflow-y: auto;
+  white-space: pre-wrap;
 }
+p{
+  background: transparent;
+}
+a{background: transparent;}
 
 section:nth-child(odd){
   color: aliceblue;
@@ -76,7 +85,7 @@ section:nth-child(odd){
   grid-column-start: 1;
   grid-column-end: 2;
 }
-section.noteContainer:nth-child(even){
+section.note-container:nth-child(even){
   color: #2A324B;
   height: 500px;
   background: aliceblue;
@@ -86,35 +95,36 @@ section.noteContainer:nth-child(even){
 
 
 @media (max-width: 480px) {
-  .notesContainer{
+  .notes-container{
     margin: 2%;
     display: flex;
     flex-direction: column;
+    
   }
-  .noteTitle{
+  .note-title{
     background: transparent;
     margin: 0%;
     font-size: medium;
     text-align: center;
   }
-    .noteContent{
+    .note-content{
     background: transparent;
     font-size:small;
     text-align:left;
   }
-    .noteAuthor{
+    .note-author{
     background: transparent;
     font-size: small;
   }
   section:nth-child(odd){
     color: aliceblue;
   }
-  section.noteContainer:nth-child(even){
+  section.note-container:nth-child(even){
     color: #2A324B;
     background: aliceblue;
     height: fit-content;
   }
-  .noteContainer{
+  .note-container{
     background-color: #767B91;
     border-radius: 1rem;
     margin-bottom: 1rem;
@@ -124,33 +134,33 @@ section.noteContainer:nth-child(even){
     flex-direction: column;
     
   }
-  .btnSection{
+  .btn-section{
     background: transparent;
     display: flex;
     justify-content: space-around;
   }
-  .editButton{
+  .edit-button{
     background: transparent;
     border: none;
     width: 2rem;
     display:inline;
   }
-  .editImgBtn{
+  .edit-img-btn{
     background: transparent;
     opacity: 0.6;
     width: 60%;
   }
-  .eraseButton{
+  .erase-button{
     background: transparent;
     border: none;
     width: 2rem;
     margin:0 5% 0 5%;
   }
-    .eraseImgBtn{
+    .erase-img-btn{
     background: transparent;
     width: 60%;
   }
-  .addNoteBtn {
+  .add-note-btn {
     border-radius: 50%;
     border: none;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
@@ -159,7 +169,7 @@ section.noteContainer:nth-child(even){
     right: 4%;
     border: 5px solid #767B91;
   }
-  .addBtn{
+  .add-btn{
     background-color: transparent;
   }
 }

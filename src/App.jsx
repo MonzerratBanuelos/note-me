@@ -6,6 +6,7 @@ import MakeNote from './Component-Routes/MakeNote/MakeNote';
 import Feed from '../src/Component-Routes/Feed/Feed';
 import Register from './Component-Routes/Register';
 import Page404 from './Component-Routes/Page404/Page404';
+import EditNote from './Component-Routes/EditNote/EditNote'
 
 import { onAuthStateChanged } from "firebase/auth";
 
@@ -33,6 +34,7 @@ function App() {
         <Route path='/' element={<Feed handleExit={exit} UserInfo={ isAutenticate}/>} />
         <Route path='/feed' element={<Feed handleExit={exit} UserInfo ={ isAutenticate} />} />
         <Route path='/MakeNote' element={<MakeNote  handleExit={exit} UserInfo={ isAutenticate}/>} />
+        <Route path="/EditNote/:id" element={<EditNote handleExit={exit} UserInfo={ isAutenticate}/>} />
       </Routes>
     : <Routes>
         <Route path='/' element={<Login />} /> 

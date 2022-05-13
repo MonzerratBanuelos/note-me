@@ -36,17 +36,17 @@ h1{
   padding: 2% 0 2% 0;
 }
 @media (max-width: 768px) {
-  .App {
+  .app {
     text-align: center;
     color: aliceblue;
   }
 
-  .App-logo {
+  .app-logo {
     height: 40vmin;
     pointer-events: none;
   }
 
-  .App-header {
+  .app-header {
     background-color: #2a324b;
     min-height: 100vh;
     display: flex;
@@ -57,23 +57,23 @@ h1{
     color: white;
   }
 
-  .App-link {
+  .app-link {
     color: #61dafb;
   }
 }
 /* AQUI VA LA TABLET DE MANERA HORIZONTAL*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .App {
+  .app {
     text-align: center;
     color: aliceblue;
   }
 
-  .App-logo {
+  .app-logo {
     height: 40vmin;
     pointer-events: none;
   }
 
-  .App-header {
+  .app-header {
     background-color: #2a324b;
     min-height: 100vh;
     display: flex;
@@ -84,7 +84,7 @@ h1{
     color: white;
   }
 
-  .App-link {
+  .app-link {
     color: #61dafb;
   }
 }

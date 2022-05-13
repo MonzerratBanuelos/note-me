@@ -26,4 +26,12 @@ module.exports = {
     "no-unused-vars": 1,
     "react/prop-types": "off",
   },
+  overrides: [
+    {
+        files: ["*.test.js"],
+        rules: {
+            "no-undef": "off"
+        }
+    }
+]
 };

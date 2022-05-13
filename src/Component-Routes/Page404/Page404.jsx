@@ -8,9 +8,9 @@ function Page404() {
     navigate('/');
   }
   return (
-    <div className='errorContainer'>
-      <img src={error404} className='errorLogo' alt='Error Logo' />
-      <button className='goBackbtn' onClick={handleClick}>Ir al inicio</button>
+    <div className='error-container'>
+      <img src={error404} className='error-logo' alt='Error Logo' />
+      <button className='go-back-btn' alt='Go to Login' onClick={handleClick}>Go to Login</button>
     </div>
   );
 }

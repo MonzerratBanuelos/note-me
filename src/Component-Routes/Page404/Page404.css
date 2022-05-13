@@ -1,13 +1,14 @@
-.errorContainer{
+.error-container{
   display: flex;
   align-items:center;
+  flex-direction: column;
 }
-.errorLogo{
+.error-logo{
   display: flex;
   width: 70%;
   margin: 5%;
 }
-.goBackbtn{
+.go-back-btn{
   color: #2a324b;
   font-size: x-large;
   font-weight: 600;
@@ -22,18 +23,18 @@
   margin-top: 8%
 }
 @media (min-width: 1024px) {
-.errorContainer{
+.error-container{
   display: flex;
   align-items:center;
   flex-direction: column;
   justify-content:space-around;
 }
-.errorLogo{
+.error-logo{
   display: flex;
   width: 50%;
   margin: 2%
 }
-.goBackbtn{
+.go-back-btn{
   color: #2a324b;
   font-size: x-large;
   font-weight: 600;

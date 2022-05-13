@@ -8,11 +8,11 @@ function Login() {
 
   return (
     <>
-    <div className='loginContainer'>
-      <img src={logo} className='NoteLogo' alt='logo' />
-      <button className='buttonsStylesLogin' onClick={ ()=>{ LoginGoogle()} }>
+    <div className='login-container'>
+      <img src={logo} className='note-logo' alt='logo' />
+      <button className='buttons-styles-login' onClick={ ()=>{ LoginGoogle()} }>
         Login with
-        <img src={google} className='Google-logo' alt='google' />
+        <img src={google} className='google-logo' alt='google' />
       </button>
       <br/>
     </div>

@@ -4,24 +4,24 @@
     padding: 0%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.buttonsStyles {
+.buttons-styles {
   color: #2a324b;
   font-size: x-large;
   font-weight: 600;
-  background-color: aliceblue;
+  background-color: #C4C4C4;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
   border-radius: 15px;
   width: 30%;
   margin: 2% 0 0 0;
 }
-.User-photo{
+.user-photo{
   height: auto;
   width: 8%;
   border-radius: 50%;
   border: 1px solid aliceblue;
   margin: 0 2% 0 2%;
 }
-.inputNotes{
+.input-notes{
   width: 80%;
   height: 3rem;
   background-color: aliceblue;
@@ -31,10 +31,10 @@
   font-size: larger;
   padding: 0%;
 }
-#makeNoteContent{
+#make-note-content{
   height: 20rem;
 }
-.LogOut{
+.logo-out{
   color: aliceblue;
   font-size: medium;
   font-weight: 600;
@@ -49,10 +49,11 @@ label{
   font-size: x-large;
   font-weight: 800;
   margin-top: 3%;
+  color: aliceblue;
 }
-.makeNotePage{
+.make-note-page{
   width: 100vw;
-  height: 1024px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content:flex-start;
@@ -77,6 +78,7 @@ h3{
 h1{
   font-size: xx-large;
   margin-top: 6%;
+  color: aliceblue;
 }
 
 /* AQUI VA LA TABLET DE MANERA HORIZONTAL*/
@@ -100,7 +102,7 @@ label{
   font-weight: 800;
   margin-top: 1%;
 }
-.inputNotes{
+.input-notes{
   width: 80%;
   height: 3rem;
   background-color: aliceblue;
@@ -110,10 +112,10 @@ label{
   font-size: larger;
   padding: 0%;
 }
-#makeNoteContent{
+#make-note-content{
   height: 18rem;
 }
-.buttonsStyles {
+.buttons-styles {
   color: #2a324b;
   font-size: x-large;
   font-weight: 600;
@@ -123,7 +125,7 @@ label{
   width: 30%;
   margin: 1%;
 }
-.makeNotePage{
+.make-note-page{
   width: 100vw;
   height:100vh;
   display: flex;
@@ -142,6 +144,14 @@ label{
     width: 100%;
     height: fit-content;
     align-items: center;
+    padding: 2% 0;
+  }
+  .user-photo{
+    height: auto;
+    width: 10%;
+    border-radius: 50%;
+    border: 1px solid aliceblue;
+    margin: 0 2% 0 2%;
   }
   h3{
     background-color: #C4C4C4;
@@ -150,8 +160,14 @@ label{
     align-items: center;
     font-size: medium;
   }
+  h1{
+    font-size: large;
+  }
+  label{
+    font-size: large;
+  }
   
-.LogOut{
+.logo-out{
   background-color:#2a324b;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
   width: 10%;
@@ -159,10 +175,23 @@ label{
   border-radius: 20%;
   margin: 2%;
 }
-.exit-Logo{
+.exit-logo{
   display: flex;
   align-items: center;
   justify-content: center;
   width: 70%;
+}
+.add-note-btn {
+  border-radius: 50%;
+  border: none;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+  position: fixed;
+  bottom: 4%;
+  right: 4%;
+  border: 5px solid #767B91;
+  transform: scale(0.7);
+}
+#make-note-content {
+  height: 15rem;
 }
 }
