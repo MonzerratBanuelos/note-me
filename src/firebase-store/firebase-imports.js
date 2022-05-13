@@ -14,7 +14,7 @@ export {
   arrayRemove,
   serverTimestamp,
 // eslint-disable-next-line import/no-unresolved
-  } from 'https://www.gstatic.com/firebasejs/9.6.11/firebase-firestore.js';
+  } from 'firebase/firestore';
   export {
   getAuth,
   createUserWithEmailAndPassword,
@@ -25,5 +25,5 @@ export {
   GoogleAuthProvider,
   signInWithPopup,
 // eslint-disable-next-line import/no-unresolved
-  } from 'https://www.gstatic.com/firebasejs/9.6.11/firebase-auth.js';
-export { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.11/firebase-app.js";
+  } from 'firebase/auth';
+export { initializeApp } from "firebase/app";

@@ -12,7 +12,6 @@ import { onAuthStateChanged } from "firebase/auth";
 
 import {auth, exit} from './firebase-store/firebase-auth'
 
-
 function App() {
   // Este es el objeto de donde sacamos el estado actual y el nuevo 
   // is Autenticate es igual a null y setAutenticate es con lo que modificaremos 
@@ -31,15 +30,15 @@ function App() {
   return (
     <BrowserRouter>
     {isAutenticate?<Routes>
-        <Route path='/' element={<Feed handleExit={exit} UserInfo={ isAutenticate}/>} />
-        <Route path='/feed' element={<Feed handleExit={exit} UserInfo ={ isAutenticate} />} />
-        <Route path='/MakeNote' element={<MakeNote  handleExit={exit} UserInfo={ isAutenticate}/>} />
-        <Route path="/EditNote/:id" element={<EditNote handleExit={exit} UserInfo={ isAutenticate}/>} />
+        <Route path='/note-me' element={<Feed handleExit={exit} UserInfo={ isAutenticate}/>} />
+        <Route path='/note-me/feed' element={<Feed handleExit={exit} UserInfo ={ isAutenticate} />} />
+        <Route path='/note-me/MakeNote' element={<MakeNote  handleExit={exit} UserInfo={ isAutenticate}/>} />
+        <Route path="/note-me/EditNote/:id" element={<EditNote handleExit={exit} UserInfo={ isAutenticate}/>} />
       </Routes>
     : <Routes>
-        <Route path='/' element={<Login />} /> 
+        <Route path='/note-me' element={<Login />} /> 
         <Route path='*' element={<Page404 />} />
-        <Route path='/Register' element={<Register />} />
+        <Route path='/note-me/Register' element={<Register />} />
     </Routes>}
     </BrowserRouter>
   );

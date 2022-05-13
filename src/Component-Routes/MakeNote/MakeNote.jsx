@@ -22,7 +22,7 @@ const createNote = async () => {
   date: serverTimestamp(),
   dateTime: new Date().toLocaleDateString(),
 })
-navigate('/')
+navigate('/note-me')
 };
 
 
@@ -58,7 +58,7 @@ setNote(e.target.value)
       onChange={handleChangeNote}
       />
       <button className='buttons-styles' onClick={()=>{createNote()}}>Publish</button>
-      <button className='buttons-styles' onClick={()=>{navigate('/')}}>Cancel</button>
+      <button className='buttons-styles' onClick={()=>{navigate('/note-me')}}>Cancel</button>
 
       
     </div>

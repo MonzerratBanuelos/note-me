@@ -56,7 +56,7 @@ function Feed({handleExit, UserInfo}) {
       })};
       </div>
 
-      <button className='add-note-btn' onClick={()=> {navigate('/MakeNote')}}>
+      <button className='add-note-btn' onClick={()=> {navigate('/note-me/MakeNote')}}>
       <img src={ addSign } className='add-btn' alt='addBtn' />
       </button>
     </div>

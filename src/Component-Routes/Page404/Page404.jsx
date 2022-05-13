@@ -5,7 +5,7 @@ function Page404() {
 
   const navigate = useNavigate()
   function handleClick () {
-    navigate('/');
+    navigate('/note-me');
   }
   return (
     <div className='error-container'>
