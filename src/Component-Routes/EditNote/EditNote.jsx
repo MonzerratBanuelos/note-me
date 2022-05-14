@@ -44,7 +44,7 @@ const handleChange = (event)=> {
 const updateNote = async (id) => {
   await updateDoc(doc(db, 'users', auth.currentUser.uid, 'notes', id), noteData)
   console.log(noteData)
-  navigate('/note-me')
+  navigate('/')
 };
 
 
@@ -74,7 +74,7 @@ const updateNote = async (id) => {
       onChange={(e)=> setNoteData({ ...noteData, note : e.target.value})}
       />
       <button className='buttons-styles' onClick={()=>{updateNote(id)}}>Update Note</button>
-      <button className='buttons-styles' onClick={()=>{navigate('/note-me')}}>Cancel</button>
+      <button className='buttons-styles' onClick={()=>{navigate('/')}}>Cancel</button>
 
       
     </div>

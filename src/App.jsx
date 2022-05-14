@@ -30,15 +30,15 @@ function App() {
   return (
     <BrowserRouter>
     {isAutenticate?<Routes>
-        <Route path='/note-me' element={<Feed handleExit={exit} UserInfo={ isAutenticate}/>} />
-        <Route path='/note-me/feed' element={<Feed handleExit={exit} UserInfo ={ isAutenticate} />} />
-        <Route path='/note-me/MakeNote' element={<MakeNote  handleExit={exit} UserInfo={ isAutenticate}/>} />
-        <Route path="/note-me/EditNote/:id" element={<EditNote handleExit={exit} UserInfo={ isAutenticate}/>} />
+        <Route path='/' element={<Feed handleExit={exit} UserInfo={ isAutenticate}/>} />
+        <Route path='/feed' element={<Feed handleExit={exit} UserInfo ={ isAutenticate} />} />
+        <Route path='/MakeNote' element={<MakeNote  handleExit={exit} UserInfo={ isAutenticate}/>} />
+        <Route path="/EditNote/:id" element={<EditNote handleExit={exit} UserInfo={ isAutenticate}/>} />
       </Routes>
     : <Routes>
-        <Route path='/note-me' element={<Login />} /> 
+        <Route path='/' element={<Login />} /> 
         <Route path='*' element={<Page404 />} />
-        <Route path='/note-me/Register' element={<Register />} />
+        <Route path='/Register' element={<Register />} />
     </Routes>}
     </BrowserRouter>
   );

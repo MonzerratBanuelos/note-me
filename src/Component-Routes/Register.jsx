@@ -28,7 +28,7 @@ const handleChange = ({target: {name, value} })=> {
     try {
       await signup(user.email, user.password);
       console.log('si navego')
-    navigate('/note-me');
+    navigate('/');
     } catch (error) {
       console.log('djdfj')
       if (error.code === "auth/invalid-email") {
