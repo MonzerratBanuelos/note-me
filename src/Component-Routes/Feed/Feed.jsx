@@ -46,7 +46,7 @@ function Feed({handleExit, UserInfo}) {
           <p className='note-time'>{post.dateTime}</p>
           <section className='btn-section'>
         <button className='edit-button' onClick={() => {}}>
-        <Link to={`EditNote/${post.id}`}><img src={Pencil} className='edit-img-btn' alt='Editbtn' /></Link>
+        <Link to={`/EditNote/${post.id}`}><img src={Pencil} className='edit-img-btn' alt='Editbtn' /></Link>
         </button>
         <button className='erase-button' onClick={() => {DeleteNote(post.id)}}>
         <img src={Trash} className='erase-img-btn' alt='Erasebtn' />
@@ -56,7 +56,7 @@ function Feed({handleExit, UserInfo}) {
       })};
       </div>
 
-      <button className='add-note-btn' onClick={()=> {navigate('/note-me/MakeNote')}}>
+      <button className='add-note-btn' onClick={()=> {navigate('/MakeNote')}}>
       <img src={ addSign } className='add-btn' alt='addBtn' />
       </button>
     </div>
